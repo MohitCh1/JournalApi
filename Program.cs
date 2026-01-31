@@ -97,28 +97,28 @@ var app = builder.Build();
 
 
 
-using (var scope = app.Services.CreateScope())
-{
-    var context = scope.ServiceProvider.GetRequiredService<JournalDbContext>();
+//using (var scope = app.Services.CreateScope())
+//{
+//    var context = scope.ServiceProvider.GetRequiredService<JournalDbContext>();
 
    
 
-    if (!context.Users.Any())
-    {
-        var hasher = new PasswordHasher<User>();
+//    if (!context.Users.Any())
+//    {
+//        var hasher = new PasswordHasher<User>();
 
-        var admin = new User
-        {
-            Username = "admin",
-            Roles = "Admin"
-        };
+//        var admin = new User
+//        {
+//            Username = "admin",
+//            Roles = "Admin"
+//        };
 
-        admin.Password = hasher.HashPassword(admin, "Admin@123");
+//        admin.Password = hasher.HashPassword(admin, "Your_Admin_password");
 
-        context.Users.Add(admin);
-        context.SaveChanges();
-    }
-}
+//        context.Users.Add(admin);
+//        context.SaveChanges();
+//    }
+//}
 
 
 
