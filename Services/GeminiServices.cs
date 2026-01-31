@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿git init
+    using System.Text;
 using System.Text.Json;
 using static JournalApi.DTO.GeminiRequestDTO;
 using static JournalApi.DTO.GeminiResponseDTO;
@@ -23,7 +24,7 @@ namespace JournalApi.Services
             var model = config["Gemini:Model"];
            
 
-            var url =$"{baseUrl}/{model}:generateContent?key={apiKey}";
+            var url =$"{baseUrl}/{model}:generateContent";
          
 
             var request = new GeminiRequest
